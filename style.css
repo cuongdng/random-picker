@@ -39,6 +39,7 @@ h1 {
     text-align: center;
     position: relative;
     margin-top: 200px;
+    padding: 0 40px;
 }
 
 .roll-btn {
@@ -102,6 +103,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 40px;
 }
 
 .leaderboard h2 {
@@ -124,4 +126,30 @@ textarea {
 
 .leaderboard table tr td {
     padding: 12px;
+}
+
+@media (max-width: 984px) {
+    .app {
+        flex-direction: column;
+    }
+    .leaderboard {
+        margin-top: 84px;
+    }
+}
+
+@media (max-width: 590px) {
+    h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .leaderboard {
+        max-width: 100px;
+        width: 100%;
+    }
 }

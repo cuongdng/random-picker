@@ -22,12 +22,20 @@ textArea.addEventListener('keyup', (e) => {
 
     createTags(e.target.value);
     if (e.key === 'Enter') {
-        randomChoice();
+        if (textArea.value.trim() === '') {
+            alert('List of choices is blank!');
+        } else {
+            randomChoice();
+        }
     }
 });
 rollBtn.addEventListener('click', (e) => {
-    randomChoice();
-    rollBtn.disabled = true;
+    if (textArea.value.trim() === '') {
+        alert('List of choices is blank!');
+    } else {
+        randomChoice();
+        rollBtn.disabled = true;
+    }
 });
 
 function createTags(input) {
